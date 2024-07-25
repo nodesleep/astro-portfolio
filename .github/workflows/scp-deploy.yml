@@ -1,0 +1,46 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Set up SSH and Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 0600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to my ❤️
+        uses: up9cloud/action-rsync@master
+        env:
+          HOST: ${{ secrets.VPS_HOST }}
+          KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          TARGET: /var/www/html/
+          VERBOSE: true
+          USER: root
+          ARGS: -az --exclude=/.git/
+          SSH_ARGS: "-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+          SOURCE: ./dist/
+          PRE_SCRIPT: |
+            echo start at:
+            date -u
+          POST_SCRIPT: "echo done at: && date -u"

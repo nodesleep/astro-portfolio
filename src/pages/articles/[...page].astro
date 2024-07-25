@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import Sidebar from "../../components/Sidebar";
+import Navigation from "../../components/Navigation";
+
+export const prerender = true;
+
+interface Article {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "writing";
+  data: {
+    title: string;
+    pubDate: Date;
+    description?: string;
+    category?: string;
+    author: string;
+    image?: {
+      url: string;
+      alt: string;
+    };
+    tags?: string[];
+    draft?: boolean;
+  };
+}
+// @ts-expect-error
+export async function getStaticPaths({ paginate }) {
+  // @ts-expect-error
+  const allPosts: Article[] = await getCollection("articles");
+  const publishedPosts = allPosts.filter((post) => !post.data.draft);
+  const sortedPages = publishedPosts.sort(
+    (a: Article, b: Article) =>
+      b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+  );
+
+  return paginate(sortedPages, { pageSize: 6 });
+}
+
+const { page }: any = Astro.props;
+
+const { prev, next } = page.url;
+const currentPage = page.currentPage;
+const totalPages = page.lastPage;
+---
+
+<SiteLayout title="Aron Sweet: Software Engineer">
+  <Navigation />
+  <div class="flex gap-10">
+    <div class="hidden md:block w-1/6">
+      <Sidebar client:load />
+    </div>
+    <div class="w-full md:w-5/6">
+      <h1>Articles</h1>
+      <ul class="grid grid-cols-1 justify-center pb-4">
+        {
+          page.data.map((post: Article) => {
+            return (
+              <li class="border-b border-neutral-900 py-2">
+                <a
+                  href={`/articles/${post.slug}`}
+                  class="hover:text-aronblue important"
+                >
+                  <div class="flex flex-col justify-center">
+                    <h5>{post.data.title}</h5>
+                    <p>{post.data.description}</p>
+                  </div>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+      <div class="flex items-center pt-10 gap-4 w-[20rem]">
+        Page {currentPage} of {totalPages}
+        <a href={prev}>Prev </a>
+        <a href={next}> Next </a>
+      </div>
+    </div>
+  </div>
+</SiteLayout>

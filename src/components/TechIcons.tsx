@@ -9,7 +9,7 @@ export default function ReactComponent() {
   return (
     <div className="flex flex-col justify-center">
       <h4>I work with the following</h4>
-      <div className="flex items-center text-3xl gap-4">
+      <div className="flex items-center text-3xl gap-4 text-green-500">
         <FaVuejs />
         <FaReact />
         <TbBrandAstro />

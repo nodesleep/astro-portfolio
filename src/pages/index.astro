@@ -1,15 +1,20 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+import Sidebar from "../components/Sidebar";
 import AboutMe from "../components/AboutMe";
-import TechIcons from "../components/TechIcons";
+import Navigation from "../components/Navigation";
+import Articles from "../components/ArticleList";
 ---
 
 <SiteLayout title="Aron Sweet: Software Engineer">
-  <div class="flex">
-    <div class="w-1/2"></div>
-    <div class="w-1/2">
+  <Navigation />
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="w-full md:w-1/6">
+      <Sidebar client:load />
+    </div>
+    <div class="w-full md:w-5/6">
       <AboutMe />
-      <TechIcons client:load />
+      <Articles client:load />
     </div>
   </div>
 </SiteLayout>

@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import Sidebar from "../../components/Sidebar";
+import Navigation from "../../components/Navigation";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const entries = await getCollection("articles");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+---
+
+<SiteLayout title="Aron Sweet: Software Engineer" frontmatter={entry.data}>
+  <Navigation />
+  <div class="flex gap-10">
+    <div class="hidden md:block w-1/6">
+      <Sidebar client:load />
+    </div>
+    <div class="w-full md:w-5/6 pb-12">
+      <Content />
+    </div>
+  </div>
+</SiteLayout>

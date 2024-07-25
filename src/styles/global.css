@@ -63,11 +63,14 @@ JetBrainsMono is an open source font provided by JetBrains under the OFL-1.1 Lic
 :root {
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
-  font-weight: 500;
-  background-color: black;
+  font-weight: 300;
   color: white;
 
   font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  user-select: none;
 }
 
 *,
@@ -77,11 +80,11 @@ JetBrainsMono is an open source font provided by JetBrains under the OFL-1.1 Lic
 }
 
 html {
-  @apply flex min-h-screen;
+  @apply flex min-h-screen bg-[#0D1116];
 }
 
 body {
-  @apply p-6 w-[70rem] mx-auto leading-8;
+  @apply text-sky-500 p-6 w-[70rem] mx-auto leading-8;
 }
 
 h1,
@@ -90,9 +93,18 @@ h3,
 h4,
 h5 {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   margin-block: 1rem;
-  color: white;
+  letter-spacing: -1px;
+  text-transform: lowercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-neutral-300;
 }
 
 h1 {
@@ -116,9 +128,29 @@ h5 {
 }
 
 strong {
-  @apply font-bold;
+  @apply font-bold text-neutral-300;
 }
 
 p {
   padding-block: 0.5rem;
+}
+
+hr {
+  @apply border border-neutral-900 my-4;
+}
+
+ol {
+  @apply list-decimal font-bold text-neutral-400 p-0 list-inside my-8;
+}
+
+a:hover {
+  @apply text-white;
+}
+
+.astro-code {
+  @apply p-2 rounded my-5;
+}
+
+.note {
+  @apply p-6 my-3 bg-indigo-950 text-neutral-400 border border-indigo-800 rounded-lg;
 }

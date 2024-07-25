@@ -1,7 +1,13 @@
 export default function AboutMe() {
   return (
     <div>
-      <h3>My name is aron.</h3>
+      <h3>// twoslashes signifies a comment.</h3>
+      <p>
+        And since Nick Tabick beat me to the dot com and won't let it go despite
+        being dormant for years, I've gotta settle for dot dev. Anyways, I'm a
+        software engineer. I've used titles like "FullStack" and "Web Dev", but
+        that's very limiting and I'm much more capable than that.
+      </p>
       <p>
         My work has ranged from software engineering, to fullstack, to design.
         I've worked as a consultant, contractor, and freelancer in all of these
@@ -16,6 +22,7 @@ export default function AboutMe() {
         wrong application.
       </p>
       <p>I use Neovim, btw.</p>
+      <hr />
     </div>
   );
 }
