@@ -1,0 +1,15 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import AboutMe from "../components/AboutMe";
+import TechIcons from "../components/TechIcons";
+---
+
+<SiteLayout title="Aron Sweet: Software Engineer">
+  <div class="flex">
+    <div class="w-1/2"></div>
+    <div class="w-1/2">
+      <AboutMe />
+      <TechIcons client:load />
+    </div>
+  </div>
+</SiteLayout>
