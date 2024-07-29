@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import AboutMe from "../components/AboutMe";
 import Navigation from "../components/Navigation";
 import Articles from "../components/ArticleList";
+import Thoughts from "../components/Thoughts";
 ---
 
 <SiteLayout title="Aron Sweet: Software Engineer">
@@ -14,7 +15,10 @@ import Articles from "../components/ArticleList";
     </div>
     <div class="w-full md:w-5/6">
       <AboutMe />
-      <Articles client:load />
+      <div class="grid grid-cols-2 gap-4">
+        <Articles client:load />
+        <Thoughts client:load />
+      </div>
     </div>
   </div>
 </SiteLayout>
