@@ -5,6 +5,7 @@ import AboutMe from "../components/AboutMe";
 import Navigation from "../components/Navigation";
 import Articles from "../components/ArticleList";
 import Thoughts from "../components/Thoughts";
+import SidebarRight from "../components/SidebarRight";
 ---
 
 <SiteLayout title="Aron Sweet: Software Engineer">
@@ -13,12 +14,17 @@ import Thoughts from "../components/Thoughts";
     <div class="w-full md:w-1/6">
       <Sidebar client:load />
     </div>
-    <div class="w-full md:w-5/6">
+    <div class="w-full md:w-4/6">
       <AboutMe />
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2">
         <Articles client:load />
-        <Thoughts client:load />
+        <div class="block lg:hidden">
+          <Thoughts client:load />
+        </div>
       </div>
+    </div>
+    <div class="hidden lg:block md:w-1/6">
+      <SidebarRight client:load />
     </div>
   </div>
 </SiteLayout>

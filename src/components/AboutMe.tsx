@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="text-sky-400">
+    <div className="about-me">
       <h3>// twoslashes signifies a comment.</h3>
       <p>
         And since Nick Tabick beat me to the dot com and won't let it go despite
