@@ -11,16 +11,28 @@
   ],
   "links": [
     {
-      "name": "GitHub",
+      "name": "My GitHub",
       "url": "https://github.com/nodesleep"
     },
     {
-      "name": "Twitter",
+      "name": "X Profile",
       "url": "https://x.com/asyncawaited"
     },
     {
       "name": "Instagram",
       "url": "https://instagram.com/asyncawaited"
+    },
+    {
+      "name": "Hyprland Conf",
+      "url": "https://github.com/nodesleep/hyprland-setup"
+    },
+    {
+      "name": "Neovim Conf",
+      "url": "https://github.com/nodesleep/nvim-config"
+    },
+    {
+      "name": "TornadoTrax",
+      "url": "https://tornadotrax.com"
     }
   ]
 }

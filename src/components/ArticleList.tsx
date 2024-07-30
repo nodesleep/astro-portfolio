@@ -40,11 +40,15 @@ export default function Articles() {
 
   return (
     <div className="mt-5">
-      <h4>Tech Articles</h4>
       <ul className="article-list">
         {posts.map((post) => (
           <li key={post.slug}>
-            <a href={`/articles/${post.slug}`}>{post.data.title}</a>
+            <a href={`/articles/${post.slug}`}>
+              <span className="text-white">
+                {new Date(post.data.pubDate).toLocaleDateString("en-US")}
+              </span>{" "}
+              {post.data.title}
+            </a>
           </li>
         ))}
       </ul>

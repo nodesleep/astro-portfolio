@@ -1,23 +1,20 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import Sidebar from "../components/Sidebar";
 import AboutMe from "../components/AboutMe";
 import Navigation from "../components/Navigation";
 import Articles from "../components/ArticleList";
-import Thoughts from "../components/Thoughts";
 import SidebarRight from "../components/SidebarRight";
+import LinkList from "../components/LinkList";
 ---
 
 <SiteLayout title="Aron Sweet: Software Engineer">
   <Navigation />
-  <div class="flex flex-col p-6 md:flex-row gap-10 mt-24">
+  <div class="flex flex-col p-6 md:flex-row gap-10 mt-12 md:mt-24">
     <div class="w-full md:w-2/3">
       <AboutMe />
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
         <Articles client:load />
-        <div class="block lg:hidden">
-          <Thoughts client:load />
-        </div>
+        <LinkList client:load />
       </div>
     </div>
     <div class="hidden lg:block md:w-1/3">

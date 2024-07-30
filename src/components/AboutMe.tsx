@@ -1,9 +1,10 @@
 export default function AboutMe() {
   return (
     <div>
-      <h4>about me</h4>
       <div className="about-me">
-        <p>Two slashes signify a comment.</p>
+        <p>
+          <strong>Two slashes signify a comment.</strong>
+        </p>
         <p>
           I'm Aron and this is my personal space to be me and to share my
           interests in technology.
@@ -21,6 +22,10 @@ export default function AboutMe() {
           programming and HTMX. Paired together, they do an extremely wonderful
           job of eliminating the bloat that SPAs carry with them when used for
           the wrong application.
+        </p>
+        <p>
+          This website exists solely for my own purposes; giving me a platform
+          to freely test new technologies and designs.
         </p>
         <p>I use Neovim, btw.</p>
       </div>

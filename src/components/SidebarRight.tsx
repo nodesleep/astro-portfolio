@@ -7,11 +7,10 @@ export default function SidebarRight() {
 
   return (
     <div>
-      <h4>Random Thoughts</h4>
       <ul className="thought-list">
         {sortedPosts.map((post) => (
-          <li key={post.id} className="border border-indigo-500 p-3">
-            <p className="text-indigo-500 pb-0">
+          <li key={post.id} className="thought-item">
+            <p className="text-white pb-0">
               {new Date(post.date).toDateString()}
             </p>
             <p>{post.thought}</p>

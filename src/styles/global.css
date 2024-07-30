@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  @apply text-neutral-500 w-[70%] mx-auto leading-8;
+  @apply text-neutral-500 w-[90%] md:w-[70%] mx-auto leading-8;
 }
 
 h1,
@@ -102,7 +102,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply text-neutral-200;
+  @apply text-neutral-300;
 }
 
 h1::before,
@@ -158,15 +158,31 @@ a:hover {
 }
 
 .about-me {
-  @apply text-emerald-500 border border-emerald-500 p-3 shadow-lg shadow-emerald-900;
+  @apply text-amber-500 border border-amber-500 p-5 shadow-lg shadow-amber-900;
 }
 
 .article-list {
-  @apply flex flex-col justify-center gap-4 border text-yellow-500 border-yellow-500 p-3 shadow-lg shadow-yellow-900;
+  @apply flex flex-col justify-center gap-4 border text-amber-500 border-amber-500 p-5 shadow-lg shadow-amber-900;
+}
+
+.blog-item {
+  @apply text-amber-500;
+}
+
+.link-list {
+  @apply grid grid-cols-3 gap-4 border text-amber-500 border-amber-500 p-5 shadow-lg shadow-amber-900;
+}
+
+.link-list li {
+  @apply text-center;
 }
 
 .thought-list {
-  @apply flex flex-col justify-center gap-4 text-purple-400 shadow-lg shadow-purple-900;
+  @apply flex flex-col justify-center gap-8;
+}
+
+.thought-item {
+  @apply shadow-lg shadow-sky-900 border border-sky-500 text-sky-500 p-5;
 }
 
 .astro-code {
@@ -174,5 +190,5 @@ a:hover {
 }
 
 .note {
-  @apply p-6 my-3 bg-indigo-950 text-neutral-400 border border-indigo-800 rounded-lg;
+  @apply my-3 border border-sky-300 text-sky-300 p-5;
 }
