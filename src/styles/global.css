@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  @apply text-neutral-500 w-[60%] mx-auto leading-8;
+  @apply text-neutral-500 w-[70%] mx-auto leading-8;
 }
 
 h1,
@@ -92,10 +92,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Inter", sans-serif;
   font-weight: 700;
   margin-block: 1rem;
-  letter-spacing: -1px;
   text-transform: lowercase;
 }
 
@@ -104,7 +102,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply text-sky-500;
+  @apply text-neutral-200;
 }
 
 h1::before,
@@ -159,16 +157,16 @@ a:hover {
   @apply flex flex-col text-lg md:text-sm text-neutral-500;
 }
 
-/* .about-me {
-  @apply text-neutral-500;
-} */
+.about-me {
+  @apply text-emerald-500 border border-emerald-500 p-3 shadow-lg shadow-emerald-900;
+}
 
 .article-list {
-  @apply flex flex-col justify-center gap-4;
+  @apply flex flex-col justify-center gap-4 border text-yellow-500 border-yellow-500 p-3 shadow-lg shadow-yellow-900;
 }
 
 .thought-list {
-  @apply flex flex-col justify-center gap-4 text-purple-400;
+  @apply flex flex-col justify-center gap-4 text-purple-400 shadow-lg shadow-purple-900;
 }
 
 .astro-code {

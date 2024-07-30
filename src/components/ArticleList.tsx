@@ -39,7 +39,7 @@ export default function Articles() {
   }, []);
 
   return (
-    <div>
+    <div className="mt-5">
       <h4>Tech Articles</h4>
       <ul className="article-list">
         {posts.map((post) => (
