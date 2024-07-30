@@ -18,7 +18,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="flex flex-col text-lg sidebar md:text-sm text-neutral-500">
+    <div className="sidebar">
       <img src="/images/aron_duo.webp" className="rounded" alt="My avatar" />
       <div>
         <hr />

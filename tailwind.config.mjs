@@ -6,6 +6,7 @@ export default {
       colors: {
         orangered: "#FD372A",
         aronblue: "#2993D6",
+        darkblue: "#0D1116",
       },
     },
   },

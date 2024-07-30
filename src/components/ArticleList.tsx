@@ -40,7 +40,7 @@ export default function Articles() {
 
   return (
     <div>
-      <h4>// Tech Articles</h4>
+      <h4>Tech Articles</h4>
       <ul className="article-list">
         {posts.map((post) => (
           <li key={post.slug}>

@@ -1,7 +1,7 @@
 export default function AboutMe() {
   return (
     <div className="about-me">
-      <h3>// twoslashes signifies a comment.</h3>
+      <h3>twoslashes signifies a comment.</h3>
       <p>
         And since Nick Tabick beat me to the dot com and won't let it go despite
         being dormant for years, I've gotta settle for dot dev. Anyways, I'm a

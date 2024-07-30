@@ -80,11 +80,11 @@ JetBrainsMono is an open source font provided by JetBrains under the OFL-1.1 Lic
 }
 
 html {
-  @apply flex min-h-screen bg-[#0D1116];
+  @apply flex min-h-screen bg-darkblue;
 }
 
 body {
-  @apply text-sky-500 p-6 w-[80%] mx-auto leading-8;
+  @apply text-neutral-500 w-[60%] mx-auto leading-8;
 }
 
 h1,
@@ -104,7 +104,15 @@ h2,
 h3,
 h4,
 h5 {
-  @apply text-neutral-300;
+  @apply text-sky-500;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before {
+  content: "// ";
 }
 
 h1 {
@@ -147,12 +155,16 @@ a:hover {
   @apply text-white;
 }
 
-.about-me {
-  @apply text-neutral-300;
+.sidebar {
+  @apply flex flex-col text-lg md:text-sm text-neutral-500;
 }
 
+/* .about-me {
+  @apply text-neutral-500;
+} */
+
 .article-list {
-  @apply flex flex-col justify-center gap-4 text-rose-600;
+  @apply flex flex-col justify-center gap-4;
 }
 
 .thought-list {
