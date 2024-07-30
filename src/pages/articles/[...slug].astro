@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import Navigation from "../../components/Navigation";
-import SidebarRight from "../../components/SidebarRight";
 
 export const prerender = true;
 
@@ -26,11 +25,8 @@ const { Content } = await entry.render();
 <SiteLayout title=`Aron Sweet: ${entry.data.title}` frontmatter={entry.data}>
   <Navigation />
   <div class="flex gap-10 md:p-6 mt-24">
-    <div class="w-full md:w-2/3 pb-12 blog-item">
+    <div class="blog-item">
       <Content />
-    </div>
-    <div class="w-full md:w-1/3 hidden md:block">
-      <SidebarRight client:load />
     </div>
   </div>
 </SiteLayout>
