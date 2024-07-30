@@ -1,4 +1,5 @@
 export default function AboutMe() {
+  const d = new Date().getFullYear();
   return (
     <div>
       <div className="about-me">
@@ -28,6 +29,7 @@ export default function AboutMe() {
           to freely test new technologies and designs.
         </p>
         <p>I use Neovim, btw.</p>
+        <p>&copy; {d}</p>
       </div>
     </div>
   );

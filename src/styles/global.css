@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  @apply text-neutral-500 w-[90%] md:w-[70%] mx-auto leading-8;
+  @apply text-neutral-500 w-[90%] md:w-[80%] mx-auto leading-8;
 }
 
 h1,
@@ -151,10 +151,6 @@ ol {
 
 a:hover {
   @apply text-white;
-}
-
-.sidebar {
-  @apply flex flex-col text-lg md:text-sm text-neutral-500;
 }
 
 .about-me {
