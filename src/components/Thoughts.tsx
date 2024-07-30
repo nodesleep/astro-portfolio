@@ -34,14 +34,9 @@ export default function Thoughts() {
   return (
     <div>
       <h4>// Random Thoughts</h4>
-      <ul className="flex flex-col justify-center gap-4 text-emerald-500">
+      <ul className="thought-list">
         {posts.map((post) => (
-          <li key={post.slug}>
-            {post.data.title}
-            <span className="text-sky-300">
-              -{new Date(post.data.pubDate).toDateString()}
-            </span>
-          </li>
+          <li key={post.slug}>{post.data.title}</li>
         ))}
       </ul>
     </div>

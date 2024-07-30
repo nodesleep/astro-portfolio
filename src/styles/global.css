@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  @apply text-sky-500 p-6 w-[70rem] mx-auto leading-8;
+  @apply text-sky-500 p-6 w-[70%] mx-auto leading-8;
 }
 
 h1,
@@ -145,6 +145,14 @@ ol {
 
 a:hover {
   @apply text-white;
+}
+
+.article-list {
+  @apply flex flex-col justify-center gap-4 text-yellow-400;
+}
+
+.thought-list {
+  @apply flex flex-col justify-center gap-4 text-emerald-400;
 }
 
 .astro-code {

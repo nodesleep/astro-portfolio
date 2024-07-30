@@ -41,7 +41,7 @@ export default function Articles() {
   return (
     <div>
       <h4>// Tech Articles</h4>
-      <ul className="flex flex-col justify-center gap-4">
+      <ul className="article-list">
         {posts.map((post) => (
           <li key={post.slug}>
             <a href={`/articles/${post.slug}`}>{post.data.title}</a>
