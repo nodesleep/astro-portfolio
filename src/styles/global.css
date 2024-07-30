@@ -162,7 +162,7 @@ a:hover {
 }
 
 .blog-item {
-  @apply text-amber-500;
+  @apply text-amber-500 w-full md:w-2/3 pb-12 mx-auto;
 }
 
 .link-list {
