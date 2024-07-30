@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "thought": "There's way too much elitism in this industry.",
+      "date": "2024-07-16"
+    },
+    {
+      "id": 2,
+      "thought": "I can't wrap my head around how Evernote became so successful.",
+      "date": "2024-07-29"
+    },
+    {
+      "id": 3,
+      "thought": "One of the most rewarding things about Fatherhood is when your child begins to teach you instead.",
+      "date": "2024-07-30"
+    },
+    {
+      "id": 4,
+      "thought": "Astro and Go are two things I'm fortunate to have discovered.",
+      "date": "2024-7-30"
+    }
+  ]
+}

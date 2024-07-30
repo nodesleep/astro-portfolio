@@ -1,7 +1,7 @@
 export default function Navigation() {
   return (
-    <div className="flex font-bold w-full mb-8">
-      <ul className="flex items-center ml-auto gap-6">
+    <div className="flex font-bold w-[90%] md:w-[80%] items-center fixed p-6 bg-darkblue">
+      <ul className="flex items-center gap-6">
         <li>
           <a href="/" className="hover:text-white">
             Home
@@ -13,6 +13,11 @@ export default function Navigation() {
           </a>
         </li>
       </ul>
+      <div className="ml-auto">
+        <a href="https://github.com/nodesleep/astro-porfolio" target="_blank">
+          Source Code
+        </a>
+      </div>
     </div>
   );
 }

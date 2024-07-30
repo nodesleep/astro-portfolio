@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import Sidebar from "../../components/Sidebar";
 import Navigation from "../../components/Navigation";
 
 export const prerender = true;
@@ -45,29 +44,26 @@ const currentPage = page.currentPage;
 const totalPages = page.lastPage;
 ---
 
-<SiteLayout title="Aron Sweet: Software Engineer">
+<SiteLayout title="Aron Sweet: Articles">
   <Navigation />
-  <div class="flex gap-10">
-    <div class="hidden md:block w-1/6">
-      <Sidebar client:load />
-    </div>
-    <div class="w-full md:w-5/6">
-      <h1>Articles</h1>
-      <ul class="grid grid-cols-1 justify-center pb-4">
+  <div class="flex gap-10 p-6 mt-24">
+    <div>
+      <h4>Articles</h4>
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center pb-4">
         {
           page.data.map((post: Article) => {
             return (
-              <li class="border-b border-neutral-900 py-2">
-                <a
-                  href={`/articles/${post.slug}`}
-                  class="hover:text-aronblue important"
-                >
+              <a href={`/articles/${post.slug}`}>
+                <li class="border border-amber-500 hover:border-amber-200 shadow-lg shadow-amber-900 hover:shadow-amber-200 p-6 text-amber-500 hover:text-amber-200">
                   <div class="flex flex-col justify-center">
-                    <h5>{post.data.title}</h5>
+                    <p class="text-white">
+                      {new Date(post.data.pubDate).toLocaleDateString("en-US")}
+                    </p>
+                    <p class="text-2xl font-bold">{post.data.title}</p>
                     <p>{post.data.description}</p>
                   </div>
-                </a>
-              </li>
+                </li>
+              </a>
             );
           })
         }
