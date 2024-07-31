@@ -3,7 +3,7 @@ export default function AboutMe() {
   return (
     <div>
       <div className="about-me">
-        <p>
+        <p className="text-lg">
           <strong>Two slashes signify a comment.</strong>
         </p>
         <p>
