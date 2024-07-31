@@ -54,7 +54,7 @@ const totalPages = page.lastPage;
           page.data.map((post: Article) => {
             return (
               <a href={`/articles/${post.slug}`}>
-                <li class="border border-amber-500 hover:border-amber-200 shadow-lg shadow-amber-900 hover:shadow-amber-200 p-6 text-amber-500 hover:text-amber-200">
+                <li class="article-page-list-item">
                   <div class="flex flex-col justify-center">
                     <p class="text-white">
                       {new Date(post.data.pubDate).toLocaleDateString("en-US")}
