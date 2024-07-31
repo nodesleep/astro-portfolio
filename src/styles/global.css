@@ -154,11 +154,11 @@ a:hover {
 }
 
 .about-me {
-  @apply text-amber-500 border border-amber-500 p-5 shadow-lg shadow-amber-900;
+  @apply text-amber-500 border border-amber-500 p-5 md:shadow-lg md:shadow-amber-900;
 }
 
 .article-list {
-  @apply flex flex-col justify-center gap-4 border text-amber-500 border-amber-500 p-5 shadow-lg shadow-amber-900;
+  @apply flex flex-col justify-center gap-4 border text-amber-500 border-amber-500 p-5 md:shadow-lg md:shadow-amber-900;
 }
 
 .blog-item {
@@ -166,7 +166,7 @@ a:hover {
 }
 
 .link-list {
-  @apply grid grid-cols-3 gap-4 border text-amber-500 border-amber-500 p-5 shadow-lg shadow-amber-900;
+  @apply grid grid-cols-3 gap-4 border text-amber-500 border-amber-500 p-5 md:shadow-lg md:shadow-amber-900;
 }
 
 .link-list li {
@@ -178,7 +178,7 @@ a:hover {
 }
 
 .thought-item {
-  @apply shadow-lg shadow-sky-900 border border-sky-500 text-sky-500 p-5;
+  @apply md:shadow-lg md:shadow-sky-900 border border-sky-500 text-sky-500 p-5;
 }
 
 .astro-code {

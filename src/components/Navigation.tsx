@@ -13,9 +13,9 @@ export default function Navigation() {
           </a>
         </li>
       </ul>
-      <div className="ml-auto">
+      <div className="flex items-center ml-auto">
         <a href="https://github.com/nodesleep/astro-porfolio" target="_blank">
-          Source Code
+          Source
         </a>
       </div>
     </div>
