@@ -5,11 +5,18 @@ import Navigation from "../components/Navigation";
 import Articles from "../components/ArticleList";
 import SidebarRight from "../components/SidebarRight";
 import LinkList from "../components/LinkList";
+import MenuItem from "../components/MenuItem";
 ---
 
 <SiteLayout title="Aron Sweet: Software Engineer">
   <Navigation />
-  <div class="flex flex-col p-6 md:flex-row gap-10 mt-20 md:mt-24">
+  <div class="hidden md:flex items-center gap-10 p-6 w-full mt-20 md:mt-24">
+    <MenuItem itemName="Random Item" itemLink="text" />
+    <MenuItem itemName="Some Stuff" itemLink="text" />
+    <MenuItem itemName="Cool" itemLink="text" />
+    <MenuItem itemName="Sounds Great" itemLink="text" />
+  </div>
+  <div class="flex flex-col p-6 md:flex-row gap-10 mt-24 md:mt-0">
     <div class="w-full md:w-2/3">
       <AboutMe />
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">

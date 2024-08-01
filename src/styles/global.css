@@ -177,6 +177,10 @@ a:hover {
   @apply text-center;
 }
 
+.menu-item {
+  @apply flex items-center justify-center shadow-lg shadow-emerald-900 border border-emerald-500 text-emerald-500 p-3;
+}
+
 .thought-list {
   @apply flex flex-col justify-center gap-8;
 }
